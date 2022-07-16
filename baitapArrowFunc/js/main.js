@@ -40,9 +40,15 @@ let activeBtn = () => {
     });
   });
 };
-let changeColor = (color) =>{
-    
-}
+window.changeColor = (color) => {
+  let btnClasslist = document.querySelectorAll(".color-button").classList;
+  if (btnClasslist.contains("active")) {
+    document.querySelector("#house").classList.add(color);
+  } else {
+    document.querySelector("#house").classList.remove(color);
+  }
+};
+
 window.onload = function () {
   renderBtn();
   activeBtn();
