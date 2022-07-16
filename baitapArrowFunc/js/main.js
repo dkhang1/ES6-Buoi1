@@ -41,12 +41,8 @@ let activeBtn = () => {
   });
 };
 window.changeColor = (color) => {
-  let btnClasslist = document.querySelectorAll(".color-button").classList;
-  if (btnClasslist.contains("active")) {
-    document.querySelector("#house").classList.add(color);
-  } else {
-    document.querySelector("#house").classList.remove(color);
-  }
+  console.log(color);
+  document.querySelector("#house").className = "house" + ' ' + color;
 };
 
 window.onload = function () {
